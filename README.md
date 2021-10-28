@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+## সিম্পল অথেন্টিকেশন
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+১. firebase এর authentication এ গিয়ে যে লগইন সিস্টেম ইমপ্লিমেন্ট করবে সেই প্রসেস এনাবেল করো।
 
-## Available Scripts
+২. google ছাড়া অন্য কোন থার্ডপার্টি যদি হয় তাহলে তাদের developer. ওয়েবসাইট এ যাও। সেখানে গিয়ে app তৈরি করো। সেখানে app id আর সিক্রেট দেখতে পাবে। সেই থার্ড পার্টি এপ এর আইডি আর সিক্রেট ফায়ারবেজ এ এনে বসিয়ে দাও
 
-In the project directory, you can run:
+৩. ফায়ারবেজ থেকে auth redirect url কপি করে থার্ডপার্টি app এর সেটিংস এ বসিয়ে দাও। এইটা ইম্পরট্যান্ট। তাহলে লগইন সাকসেস হওয়ার পর। বা ইউজার লগইন করার অনুমতি দেয়ার পর সেটা তোমার ওয়েবসাইট এ রিডাইরেক্ট হবে। না করলে কিন্তু লগিন হওয়ার পর তোমার ওয়েবসাইট এ আসবে না।
 
-### `yarn start`
+৪. তোমার ওয়েবসাইট এ লগইন বাটন ক্রিয়েট করে সেটার ইভেন্ট হ্যান্ডলার এর মধ্যে firebase এর ডকুমেন্টেশন থেকে কোড এনে বসিয়ে দাও।
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+৫. যদি লগইন সাকসেসফুল হয় তাহলে user এর স্টেট্ ডিক্লেয়ার করে সেটাকে দেখায় দাও। বা ইউজ করতে পারে। error খাইলে সেটাও দেখাতে পারো।
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## চ্যালেঞ্জ
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+আমরা গুগল, ইমেইল/পাসওয়ার্ড, গিটহাব, ফেইসবুক এর লগইন সিস্টেম দেখাইছি। এই চারটা বাদে তুমি অন্য আরেকটা নিজে নিজে করার চেষ্টা করো। দেখো পারো কিনা।
