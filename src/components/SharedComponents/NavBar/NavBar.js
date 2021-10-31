@@ -1,7 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const NavBar = () => {
+  const { loggedInUser, logOut } = useAuth();
   return (
     <nav>
       <ul>
@@ -20,11 +22,20 @@ const NavBar = () => {
             Dashboard
           </NavLink>
         </li>
-        <li>
-          <NavLink to='/login' activeClassName='active'>
-            <button>Login</button>
-          </NavLink>
-        </li>
+        {!loggedInUser ? (
+          <li>
+            <NavLink to='/login'>
+              <button>Login</button>
+            </NavLink>
+          </li>
+        ) : (
+          <>
+            <li>{loggedInUser.displayName}</li>
+            <li>
+              <button onClick={logOut}>Logout</button>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );

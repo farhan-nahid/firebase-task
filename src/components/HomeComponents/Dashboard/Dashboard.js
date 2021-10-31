@@ -1,11 +1,11 @@
 import React from 'react';
 
-const NotFoundRoute = () => {
+const Dashboard = () => {
   return (
     <section className='container center__align'>
-      <h2>404!!! Route Not Found</h2>
+      <h1>This is Dashboard</h1>
     </section>
   );
 };
 
-export default NotFoundRoute;
+export default Dashboard;

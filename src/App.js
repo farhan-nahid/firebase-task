@@ -8,10 +8,11 @@ import Home from './components/HomeComponents/Home/Home';
 import Footer from './components/SharedComponents/Footer/Footer';
 import NavBar from './components/SharedComponents/NavBar/NavBar';
 import NotFoundRoute from './components/SharedComponents/NotFoundRoute/NotFoundRoute';
+import AuthProvider from './context/AuthProvider';
 
 function App() {
   return (
-    <div>
+    <AuthProvider>
       <Router>
         <NavBar />
         <Switch>
@@ -24,7 +25,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </div>
+    </AuthProvider>
   );
 }
 
