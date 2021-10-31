@@ -2,8 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import LogIn from './components/AuthComponents/LogIn/LogIn';
+import PrivateRoute from './components/AuthComponents/PrivateRoute/PrivateRoute';
 import Register from './components/AuthComponents/Register/Register';
 import About from './components/HomeComponents/About/About';
+import Dashboard from './components/HomeComponents/Dashboard/Dashboard';
 import Home from './components/HomeComponents/Home/Home';
 import Footer from './components/SharedComponents/Footer/Footer';
 import NavBar from './components/SharedComponents/NavBar/NavBar';
@@ -21,6 +23,9 @@ function App() {
           <Route path='/about' component={About} />
           <Route path='/login' component={LogIn} />
           <Route path='/register' component={Register} />
+          <PrivateRoute path='/dashboard'>
+            <Dashboard />
+          </PrivateRoute>
           <Route path='*' component={NotFoundRoute} />
         </Switch>
         <Footer />

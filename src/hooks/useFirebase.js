@@ -24,9 +24,7 @@ const useFirebase = () => {
   }, [auth]);
 
   const signInUsingGoogle = () => {
-    signInWithPopup(auth, googleProvider).catch((err) =>
-      console.log(err.message)
-    );
+    return signInWithPopup(auth, googleProvider);
   };
 
   const logOut = () => {

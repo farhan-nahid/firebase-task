@@ -1,9 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const LogIn = () => {
   const { signInUsingGoogle } = useAuth();
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_URI = location.state?.from || '/';
+
+  const handleGoogleSignIn = () => {
+    signInUsingGoogle()
+      .then(() => history.push(redirect_URI))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <section className='login__register__form container'>
       <div>
@@ -29,7 +39,7 @@ const LogIn = () => {
           New to Our Site ? <Link to='/register'>Register</Link>
         </p>
         <h3>------------------- OR -------------------</h3>
-        <button onClick={signInUsingGoogle}>Google Sign In</button>
+        <button onClick={handleGoogleSignIn}>Google Sign In</button>
       </div>
     </section>
   );
